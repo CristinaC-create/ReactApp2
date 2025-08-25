@@ -1,0 +1,693 @@
+:root {
+  --brand: #1a7f37;
+  /* primary green */
+  --brand-dark: #0e5424;
+  --ink: #1f2937;
+  --muted: #6b7280;
+  --bg: #f7faf7;
+  --card: #ffffff;
+  --line: #e5e7eb;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+/* HERO */
+.hero {
+  width: 100%;
+  height: 70vh;
+  /* adjust height as you like */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  color: white;
+  padding: 2rem;
+}
+
+.hero-img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-overlay {
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.shop-btn {
+  background: #2e7d32;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.fit-btn {
+  background: transparent;
+  border: 2px solid white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* SECTIONS */
+.section {
+  margin-top: 48px;
+}
+
+.section-title {
+  margin: 0 0 18px;
+  font-size: 24px;
+  color: var(--brand-dark);
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  gap: 18px;
+}
+
+.grid-4 {
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+/* CARDS */
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, .04);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .08);
+}
+
+.cat-card img,
+.product-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+
+.cat-card h3 {
+  padding: 12px;
+  margin: 0;
+  text-align: center;
+}
+
+.product-info {
+  padding: 12px;
+}
+
+.product-info h4 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+
+.price-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price {
+  font-weight: 700;
+  color: var(--brand-dark);
+}
+
+/* SERVICES STRIP */
+.services {
+  display: flex;
+  justify-content: center;
+  /* centers the service items */
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 3rem auto;
+  max-width: 1200px;
+}
+
+.service-item {
+  flex: 1 1 220px;
+  max-width: 250px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.service-icon {
+  font-size: 24px;
+}
+
+/* PROMO */
+/* Promo Section */
+.promo {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.promo-inner {
+  background: linear-gradient(135deg, #e8f7ec, #d6f2e0);
+  border: 1px solid #ccebd3;
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+}
+
+.promo-inner {
+  max-width: 800px;
+  text-align: center;
+  background: #e8f9ee;
+  padding: 2rem;
+  border-radius: 16px;
+  margin: 0 auto;
+}
+
+/* NEWSLETTER */
+.newsletter {
+  margin: 40px 0 8px;
+  text-align: center;
+}
+
+.newsletter .muted {
+  color: var(--muted);
+}
+
+.newsletter-form {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.newsletter-form input {
+  min-width: 260px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  font: inherit;
+}
+
+/* BUTTONS */
+.btn {
+  --bg: #fff;
+  --fg: var(--ink);
+  --bd: var(--line);
+  display: inline-block;
+  padding: 10px 14px;
+  border: 1px solid var(--bd);
+  border-radius: 10px;
+  background: var(--bg);
+  color: var(--fg);
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn:hover {
+  filter: brightness(.97);
+}
+
+.btn-primary {
+  --bg: var(--brand);
+  --fg: #fff;
+  --bd: var(--brand);
+}
+
+.btn-ghost {
+  --bg: transparent;
+  --fg: #fff;
+  --bd: #ffffff66;
+}
+
+.btn-outline {
+  --bg: #fff;
+  --fg: var(--brand-dark);
+  --bd: var(--brand);
+}
+
+.btn-sm {
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+
+.center {
+  text-align: center;
+}
+
+.mt-16 {
+  margin-top: 16px;
+}
+
+.muted {
+  color: var(--muted);
+}
+.newsletter {
+  text-align: center;
+  margin: 4rem auto;
+  max-width: 600px;
+  /* keeps it from stretching too wide */
+}
+
+.newsletter h3,
+.newsletter p {
+  margin-bottom: 1rem;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.newsletter-form input {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  flex: 1;
+  max-width: 300px;
+}
+
+.newsletter-form button {
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.featured-categories {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  /* space between cards */
+  flex-wrap: wrap;
+  /* wrap on small screens */
+  margin-top: 2rem;
+}
+.category-card {
+  width: 220px;
+  text-align: center;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+.category-card img {
+  width: 100%;
+  /* take full card width */
+  height: 160px;
+  /* fixed height */
+  object-fit: cover;
+  /* crops instead of stretching */
+  border-radius: 8px;
+}
+* Page title */ .products-title {
+  font-size: 28px;
+  font-weight: 800;
+  margin: 24px 0 12px;
+}
+
+/* Filter chips */
+.product-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 8px 0 18px;
+}
+
+.chip {
+  border: 1px solid #d1d5db;
+  background: #fff;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.chip--active {
+  border-color: #2e7d32;
+  background: #eaf7ea;
+  color: #2e7d32;
+}
+
+/* Card grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+/* Card */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.04);
+}
+
+/* Image */
+.product-card__img {
+  width: 100%;
+  height: 150px;
+  /* consistent image height */
+  object-fit: cover;
+  /* crops nicely */
+  display: block;
+}
+
+/* Body */
+.product-card__body {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.product-card__title {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.3;
+}
+
+.product-card__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-card__price {
+  font-weight: 800;
+  color: #0f172a;
+}
+
+/* Small primary button (matches your other btn styles) */
+.btn {
+  --bg: #fff;
+  --fg: #0f172a;
+  --bd: #d1d5db;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--bd);
+  background: var(--bg);
+  color: var(--fg);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-primary {
+  --bg: #2e7d32;
+  --fg: #fff;
+  --bd: #2e7d32;
+}
+
+.btn-sm {
+  padding: 6px 10px;
+}
+product {
+  display: flex;
+  flex-direction: column;
+}
+
+.product__img {
+  width: 100%;
+  height: 300px;
+  /* fixed height so all cards align */
+  object-fit: cover;
+  /* crop/scale to fill without distortion */
+  border-radius: 8px 8px 0 0;
+  /* optional: rounded top corners */
+}
+
+.product__info {
+  padding: 12px;
+}
+
+/* <-- THIS fixes the crowding --> */
+.product__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 8px;
+}
+/* helpful variants used above */
+.btn-ghost {
+  background: transparent;
+  border: 1px solid #d0d7de;
+  color: #475569;
+}
+
+.btn-outline {
+  background: #fff;
+  border: 1px solid var(--brand, #1a7f37);
+  color: var(--brand, #1a7f37);
+}
+.price {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+/* keep the button snug on the right */
+.product__row .btn {
+  margin-left: auto;
+}
+
+/* Optional: on very small screens, stack price above button */
+@media (max-width: 420px) {
+  .product__row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .product__row .btn {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+/* Book Fitting Page */
+.fitting {
+  display: flex;
+  justify-content: center;
+  /* centers horizontally */
+  align-items: center;
+  /* centers vertically */
+  min-height: 80vh;
+  /* take most of viewport height */
+  background: var(--bg, #f7faf7);
+}
+
+.fitting-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+}
+
+.fitting-card h1 {
+  color: var(--brand, #1a7f37);
+  margin-bottom: 0.5rem;
+}
+
+.fitting-card p {
+  color: #444;
+  margin-bottom: 1.5rem;
+}
+
+.fitting-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.fitting-form input {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.fitting-form button {
+  padding: 0.9rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.fitting-container {
+  max-width: 500px;
+  /* keeps it from being too wide */
+  margin: 4rem auto;
+  /* centers horizontally & adds top spacing */
+  padding: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.fitting-container h1 {
+  text-align: center;
+  color: #1a7f37;
+}
+
+.fitting-container p {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+.fitting-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  /* spacing between inputs */
+}
+
+.fitting-container input,
+.fitting-container button {
+  width: 100%;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  background: #1a7f37;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  position: relative;
+}
+
+.cart-badge {
+  background: #1a7f37;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 0.75rem;
+  margin-left: 6px;
+}
+/* Fixed ratio box for uniform cards */
+.card.product .media {
+  aspect-ratio: 16 / 9;
+  /* choose 4/3 or 1/1 if you prefer */
+  background: #fff;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+  overflow: hidden;
+}
+
+/* Image fills the box without cropping */
+.card.product .media img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  /* show the whole image */
+  display: block;
+}
+/* Cart layout */
+.cart-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cart-item {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding: 12px;
+}
+
+/* Constrain and crop images nicely */
+.cart-img {
+  width: 120px;
+  /* pick 96–140px to taste */
+  height: 120px;
+  object-fit: cover;
+  /* no stretching; trims to fit */
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+/* Text & controls */
+.cart-info {
+  flex: 1;
+}
+
+.cart-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cart-actions input[type="number"] {
+  width: 70px;
+  padding: 6px 8px;
+  border: 1px solid var(--line, #e5e7eb);
+  border-radius: 8px;
+}
